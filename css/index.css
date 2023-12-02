@@ -1,0 +1,117 @@
+body{
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: monospace;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30pt;
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
+
+.material-symbols-outlined{
+    font-size: 40pt;
+    border:1px solid;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.material-symbols-outlined:hover{
+    transform: scale(1.5);
+}
+
+#immagine{
+    /*
+        - il path dell'immagine parte dal file css
+        - il div deve avere una dimension
+    */
+    width: 500px;
+    height: 300px;
+    background-image: url("../img/1.jpg");
+    background-repeat: no-repeat;
+    /* position -> */
+    background-position: top;
+    /*
+        contain -> deforma l'immagine fino a coprire la
+            dimensione minore del contenitore
+        cover -> deforma completamente l'immagime (nascondendone una
+            parte se serve) per riempire il contenitore
+    */
+    background-size: cover;
+
+    animation-name: carosello;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes carosello{
+    0%{
+        background-image: url("../img/1.jpg");
+        opacity: 1;
+    }
+
+    10%{
+        opacity: 0.1;
+    }
+
+    25%{
+        opacity: 1;
+        background-image: url("../img/2.jpg");
+    }
+
+    35%{
+        opacity: 0.1;
+    }
+
+    50%{
+        opacity: 1;
+        background-image: url("../img/3.jpg");
+    }
+
+    60%{
+        opacity: 0.1;
+    }
+
+    75%{
+        opacity: 1;
+        background-image: url("../img/4.jpg");
+    }
+
+    85%{
+        opacity:0.1;
+    }
+
+    100%{
+        opacity: 1;
+        background-image: url("../img/1.jpg");
+    }
+
+}
+
+footer{
+    border-top:1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+img{
+    width: 500px;
+}
+
+.nascondi{
+    display: none;
+}
