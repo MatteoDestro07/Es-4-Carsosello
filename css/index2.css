@@ -1,0 +1,39 @@
+header{
+    color:green;
+    border-color: red;
+}
+
+#immagine{
+    animation-name: unset;
+}
+
+main{
+    animation-name: carosello;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+} 
+
+@keyframes carosello{
+    0%{
+        opacity:0;
+        transform: translateX(-700px);
+    }
+
+    25%{
+        opacity:0.5;
+    }
+
+    50%{
+        opacity:1;
+        transform: translateX(0px);
+    }
+
+    75%{
+        opacity:0.5;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateX(700px);
+    }
+}
